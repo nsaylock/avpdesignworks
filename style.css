@@ -1,0 +1,123 @@
+* {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+html {
+  width: 100dvw;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  max-width: 100%;
+  margin: 0;
+  background-color: rgb(27, 27, 27);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#top-nav {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  background-color: rgb(62, 148, 247);
+  margin: 0;
+  width: 100vw;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 5;
+}
+
+#top-nav.open, #logo.open {
+  transform: translateY(0%);
+}
+
+#nav-hover-box {
+  position: absolute;
+  height: 100px;
+  width: 100%;
+  z-index: 1;
+}
+
+#logo {
+  height: 100px;
+  position: absolute;
+  left: 20px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 200;
+}
+
+.nav-link {
+  margin: 0 30px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  line-height: 40px;
+}
+
+.nav-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  transform: scaleX(0);
+  transform-origin: bottom center;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+/* ----------------------------*/
+
+.home {
+  height: 500px;
+  width: 75%;
+  margin: 150px 0 50px 12.5%;
+}
+
+h1 {
+  font-size: 100px;
+  text-shadow: 5px 5px 5px black;
+}
+
+p {
+  font-size: 25px;
+}
+
+#cobra-button {
+  height: 250px;
+  width: 100%;
+  border-radius: 25px;
+  background-color: rgb(95, 13, 13);
+  font-size: 30px;
+  transition: background-color 0.5s ease;
+  
+}
+
+#cobra-button:hover {
+  background-color: rgb(133, 15, 15);
+}
+
+.do-button-jump {
+  animation: button-jump 0.5s ease;
+}
+
+@keyframes button-jump {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
