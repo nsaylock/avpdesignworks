@@ -24,18 +24,21 @@ body {
   position: absolute;
   height: 100px;
   width: 100%;
-  background-color: rgb(62, 148, 247);
+  background-color: rgb(160, 11, 11);
   margin: 0;
   width: 100vw;
   font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  /*
   transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
   z-index: 5;
+  */
 }
 
+/*
 #top-nav.open, #logo.open {
   transform: translateY(0%);
 }
@@ -46,13 +49,16 @@ body {
   width: 100%;
   z-index: 1;
 }
+*/
 
 #logo {
-  height: 100px;
+  height: 80px;
   position: absolute;
   left: 20px;
-  transform: translateY(-100%);
+  top: 10px;
+  /*transform: translateY(-100%);
   transition: transform 0.5s ease-in-out;
+  */
   z-index: 200;
 }
 
@@ -68,7 +74,7 @@ body {
   content: "";
   position: absolute;
   width: 100%;
-  height: 2px;
+  height: 1px;
   bottom: 0;
   left: 0;
   background-color: rgb(255, 255, 255);
@@ -86,7 +92,7 @@ body {
 .home {
   height: 500px;
   width: 75%;
-  margin: 150px 0 50px 12.5%;
+  margin: 50px 0 50px 12.5%;
 }
 
 h1 {
@@ -98,18 +104,34 @@ p {
   font-size: 25px;
 }
 
-#cobra-button {
-  height: 250px;
-  width: 100%;
+.cobra-text {
+  margin-top: 10px;
+  height: 55px;
+  width: 500px;
+  text-align: middle;
+  text-align: center;
+  line-height: 50px;
   border-radius: 25px;
-  background-color: rgb(95, 13, 13);
   font-size: 30px;
-  transition: background-color 0.5s ease;
+}
+
+#cobra-button {
+  height: 500px;
+  width: 500px;
+  border-radius: 5px;
+  border: 5px solid rgb(141, 21, 21);
+  background-image: url('img/Best.jpg');
+  background-size: 500px;
+  background-position: 0px;
+  transition: transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
 }
 
 #cobra-button:hover {
-  background-color: rgb(133, 15, 15);
+  transform: translateY(-10px);
 }
 
 .do-button-jump {
@@ -117,7 +139,46 @@ p {
 }
 
 @keyframes button-jump {
-  0% { transform: translateY(0); }
+  0% { transform: translateY(-10px); }
   50% { transform: translateY(-30px); }
-  100% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+/* ---------------------- */
+
+.instructions {
+  max-width: 1000px;
+  width: 80vw;
+  padding: 0 20px 5%;
+  outline: 1px solid red;
+  margin: 150px 0 15px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-bin {
+  max-width: 1000px;
+  align-self: center;
+}
+
+h2 {
+  font-size: 40px;
+  align-self: center;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.sqr-img {
+  width: 49.8%;
+}
+
+.ins-img {
+  width: 100%;
+}
+
+.label {
+  margin: 5px 0 50px;
+  text-align: center;
 }

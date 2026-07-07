@@ -1,3 +1,4 @@
+/* Nav Bar show/hide
 const topNav = document.getElementById('top-nav');
 const navHoverBox = document.getElementById('nav-hover-box');
 const logo = document.getElementById('logo');
@@ -10,6 +11,7 @@ function transition_nav() {
   logo.classList.toggle('open');
 }
 
+ */
 const cobraButton = document.getElementById('cobra-button');
 cobraButton.addEventListener('click', ()=> {
   event.preventDefault();
